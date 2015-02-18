@@ -2,14 +2,14 @@
 AWS S3 Upload Functionality For JBIMAGES
 ========================================
 
-Includes
+#### Includes ####
 
 1. PSR0 Compliant autoloader for non-CI classes
 2. Added AWS SDK files into the repository. Although it would have been ideal to add the SDK files via composer,
 considering the scale of the application, I decided to simply add in the sdk manually in `ci/vendor`. Refer to 
 the SDK quick start [page](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/quick-start.html). 
 
-How to use:
+#### How to use: ####
 Edit the config file in `ci/application/config/aws.php`. The file is pretty much self explanatory.
 
 ```
