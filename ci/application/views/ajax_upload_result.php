@@ -7,7 +7,8 @@
 	window.parent.window.jbImagesDialog.uploadFinish({
 		filename:'<?php echo $file_name; ?>',
 		result: '<?php echo $result; ?>',
-		resultCode: '<?php echo $resultcode; ?>'
+		resultCode: '<?php echo $resultcode; ?>',
+		base_url: '<?php echo $base_url?>'
 	});
 </script>
 <style type="text/css">
