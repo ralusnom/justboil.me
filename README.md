@@ -1,6 +1,4 @@
-|------------|
-|   README   |
-|------------|
+#### Readme ####
 
 JustBoil.me Images is a simple, elegant image upload plugin for TinyMCE. It is free, opensource and licensed under Creative Commons Attribution 3.0 Unported License.
 
@@ -32,8 +30,8 @@ $config['s3']['allowed_types'] = 'gif|jpg|png|jpeg';
 $config['s3']['max_size'] = 5000;
 
 ```
-#### Special Note: Be extra cautious about not comitting this config file into public repositories.  ####
-
+#### Special Note: ###
+Be extra cautious about not comitting this config file into public repositories.
 
 
 Have a nice day! ))
