@@ -10,7 +10,7 @@ Donation gives you the right to remove attribution: http://justboil.me/donate/
 
 #### Requires ####
 
-- (Composer)[https://getcomposer.org/] for autoloading PHP dependencies 
+- [Composer](https://getcomposer.org) for autoloading PHP dependencies 
 
 #### How to use: ####
 Run:
