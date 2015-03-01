@@ -1,15 +1,22 @@
+## README ##
 
-AWS S3 Upload Functionality For JBIMAGES
-========================================
+JustBoil.me Images is a simple, elegant image upload plugin for TinyMCE. It is free, opensource and licensed under Creative Commons Attribution 3.0 Unported License.
 
-#### Includes ####
+Docs & stuff at: http://justboil.me
+Donation gives you the right to remove attribution: http://justboil.me/donate/
 
-1. PSR0 Compliant autoloader for non-CI classes
-2. Added AWS SDK files into the repository. Although it would have been ideal to add the SDK files via composer,
-considering the scale of the application, I decided to simply add the sdk file manually in `ci/vendor`. Refer to 
-the SDK quick start [page](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/quick-start.html). 
+
+### S3 Upload Functionality For JBIMAGES (Optional) ###
+
+#### Requires ####
+
+- [Composer](https://getcomposer.org) for autoloading PHP dependencies 
 
 #### How to use: ####
+Run:
+```
+composer install
+```
 Edit the config file in `ci/application/config/aws.php`. The file is pretty much self explanatory.
 
 ```
@@ -22,3 +29,9 @@ $config['s3']['allowed_types'] = 'gif|jpg|png|jpeg';
 $config['s3']['max_size'] = 5000;
 
 ```
+#### Special Note: ###
+Be extra cautious about not comitting this config file into public repositories.
+
+
+Have a nice day! ))
+
