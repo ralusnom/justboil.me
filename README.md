@@ -13,7 +13,7 @@ Donation gives you the right to remove attribution: http://justboil.me/donate/
 - [Composer](https://getcomposer.org) for autoloading PHP dependencies 
 
 #### How to use: ####
-Change directory into the /ci dir and run:
+Change directory into the `/ci` dir and run:
 ```
 composer install
 ```
