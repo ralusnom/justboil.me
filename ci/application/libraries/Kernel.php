@@ -16,7 +16,7 @@ class Kernel
     private function _bootstrap()
     {
         /* We register 3rd party autoloader */
-        require APPPATH.'../vendor/AWS/aws-autoloader.php';
+        require APPPATH.'../vendor/autoload.php';
     }
 
 }
