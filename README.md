@@ -30,7 +30,7 @@ $config['s3']['max_size'] = 5000;
 
 ```
 #### Special Note: ###
-Be extra cautious about not comitting this config file into public repositories.
+Be extra cautious about not comitting this config file with your actual s3 credentials into public repositories.
 
 
 Have a nice day! ))
