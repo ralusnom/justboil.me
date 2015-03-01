@@ -107,10 +107,9 @@ class Uploader extends CI_Controller {
 					'key' => $s3Config['key'],
 					'secret' => $s3Config['secret']
 				]);
-				$awsUploader = new \Justboilme\Upload\AwsUpload($awsClient, $s3Config);
-
+				$awsUploader = new Justboilme\Upload\AwsUpload($awsClient, $s3Config);
 				if($awsUploader->uploadFile($result['full_path'],  $result['file_name'])){
-					$result['base_url'] =   rtrim($s3Config['url'], '/');
+					$result['base_url'] =   $s3Config['url'].'/'.$s3Config['bucket'];
 				}
 				else{
 					$result['result']       = "S3 upload unsuccessful";

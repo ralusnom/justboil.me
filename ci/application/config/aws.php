@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $config['s3']['enable'] = true;
-$config['s3']['url'] = "http://your-s3-url/bucketname/";
+$config['s3']['url'] = "http://your-s3-url";
 $config['s3']['key'] = 'SAMPLEKEY';
 $config['s3']['secret'] = 'samplesecret';
 $config['s3']['bucket'] = "bucketname";
