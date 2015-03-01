@@ -96,10 +96,10 @@ class Uploader extends CI_Controller {
 				$this->image_lib->resize();
 			}
 			
-			$result['result']       = "file_uploaded";
-			$result['resultcode']   = 'ok';
-			$result['file_name']    = $conf['img_path'] . '/' . $result['file_name'];
-			$result['base_url'] =  '/';
+			$result['result']		= "file_uploaded";
+			$result['resultcode']	= 'ok';
+			$result['file_name']	= $conf['img_path'] . '/' . $result['file_name'];
+			$result['base_url'] 	= '';
 			
 			$s3Config = $this->config->item('s3', 'aws');
 			if($s3Config['enable'] === true){
@@ -108,15 +108,16 @@ class Uploader extends CI_Controller {
 					'secret' => $s3Config['secret']
 				]);
 				$awsUploader = new Justboilme\Upload\AwsUpload($awsClient, $s3Config);
-				if($awsUploader->uploadFile($result['full_path'],  $result['file_name'])){
-					$result['base_url'] =   $s3Config['url'].'/'.$s3Config['bucket'];
+				$result['base_url'] =   $s3Config['url'].'/'.$s3Config['bucket'];
+				try{
+					$awsUploader->uploadFile($result['full_path'],  $result['file_name']);
 				}
-				else{
-					$result['result']       = "S3 upload unsuccessful";
-					$result['resultcode']   = 'failed';
-					unset($result['file_name']); 
-					unset($result['base_url']);
-				}
+				catch(Exception $e){
+					$result['result']		= 'S3 Upload failed with message: '.$e->getMessage();
+					$result['resultcode']	= 'failed';
+					$result['file_name']	= '';
+					$result['base_url'] 	=  '';   
+				}			
 			}
 			// Output to user
 			$this->load->view('ajax_upload_result', $result);
@@ -126,7 +127,8 @@ class Uploader extends CI_Controller {
 			// Compile data for output
 			$result['result']		= $this->upload->display_errors(' ', ' ');
 			$result['resultcode']	= 'failed';
-			
+			$result['file_name']	 = '';
+			$result['base_url']		= '';   
 			// Output to user
 			$this->load->view('ajax_upload_result', $result);
 		}
