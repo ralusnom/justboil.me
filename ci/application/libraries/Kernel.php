@@ -16,7 +16,11 @@ class Kernel
     private function _bootstrap()
     {
         /* We register 3rd party autoloader */
-        require APPPATH.'../vendor/autoload.php';
+        require APPPATH . '/config/aws.php';
+        if($config['s3']['enable']){          
+            require APPPATH.'../vendor/autoload.php';
+        }
+
     }
 
 }
