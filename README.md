@@ -13,7 +13,7 @@ Donation gives you the right to remove attribution: http://justboil.me/donate/
 - [Composer](https://getcomposer.org) for autoloading PHP dependencies 
 
 #### How to use: ####
-Run:
+Change directory into the `/ci` dir and run:
 ```
 composer install
 ```
@@ -21,7 +21,7 @@ Edit the config file in `ci/application/config/aws.php`. The file is pretty much
 
 ```
 $config['s3']['enable'] = true;
-$config['s3']['url'] = "http://your-s3-url/bucketname/";
+$config['s3']['url'] = "http://your-s3-url";
 $config['s3']['key'] = 'SAMPLEKEY';
 $config['s3']['secret'] = 'samplesecret';
 $config['s3']['bucket'] = "bucketname";
@@ -30,7 +30,7 @@ $config['s3']['max_size'] = 5000;
 
 ```
 #### Special Note: ###
-Be extra cautious about not comitting this config file into public repositories.
+Be extra cautious about not comitting this config file with your actual s3 credentials into public repositories.
 
 
 Have a nice day! ))
