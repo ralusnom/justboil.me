@@ -103,17 +103,17 @@ class Uploader extends CI_Controller {
 			
 			$s3Config = $this->config->item('s3', 'aws');
 			if($s3Config['enable'] === true){
-				$awsClient =  Aws\S3\S3Client::factory([ 
-					'key' => $s3Config['key'],
-					'secret' => $s3Config['secret']
-				]);
+				$awsClient = Aws\S3\S3Client::factory([ 
+								'key' => $s3Config['key'],
+								'secret' => $s3Config['secret']
+							 ]);
 				$awsUploader = new Justboilme\Upload\AwsUpload($awsClient, $s3Config);
 				$result['base_url'] =   $s3Config['url'].'/'.$s3Config['bucket'];
 				try{
 					$awsUploader->uploadFile($result['full_path'],  $result['file_name']);
 				}
 				catch(Exception $e){
-					$result['result']		= 'S3 Upload failed with message: '.$e->getMessage();
+					$result['result']	= 'S3 Upload failed with message: '.$e->getMessage();
 					$result['resultcode']	= 'failed';
 					$result['file_name']	= '';
 					$result['base_url'] 	=  '';   
