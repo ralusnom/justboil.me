@@ -106,7 +106,7 @@ class Uploader extends CI_Controller {
 				$awsClient = Aws\S3\S3Client::factory([ 
 								'key' => $s3Config['key'],
 								'secret' => $s3Config['secret']
-							 ]);
+							]);
 				$awsUploader = new Justboilme\Upload\AwsUpload($awsClient, $s3Config);
 				$result['base_url'] =   $s3Config['url'].'/'.$s3Config['bucket'];
 				try{
