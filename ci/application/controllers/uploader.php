@@ -91,10 +91,10 @@ class Uploader extends CI_Controller
                 // Resizing parameters
                 $resizeParams =
                     [
-                    'source_image' => $result['full_path'],
-                    'new_image' => $result['full_path'],
-                    'width' => $conf['max_width'],
-                    'height' => $conf['max_height']
+                        'source_image' => $result['full_path'],
+                        'new_image' => $result['full_path'],
+                        'width' => $conf['max_width'],
+                        'height' => $conf['max_height']
                     ];
 
                 // Load resize library

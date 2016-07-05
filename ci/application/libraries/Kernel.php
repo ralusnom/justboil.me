@@ -1,7 +1,7 @@
 <?php
 
 class Kernel
-{    
+{
     /**
      * Constructor.
      */
@@ -9,7 +9,7 @@ class Kernel
     {
         $this->_bootstrap();
     }
-    
+
     /**
      * Perform boostrap operations.
      */
@@ -17,8 +17,8 @@ class Kernel
     {
         /* We register 3rd party autoloader */
         require APPPATH . '/config/aws.php';
-        if($config['s3']['enable']){          
-            require APPPATH.'../vendor/autoload.php';
+        if ($config['s3']['enable']) {
+            require APPPATH . '../vendor/autoload.php';
         }
 
     }

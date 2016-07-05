@@ -1,9 +1,9 @@
 <?php
 
-$lang['upload_userfile_not_set'] = 'Unable to find a post variable called userfile.';
+$lang['upload_userfile_not_set'] = 'Die Datei names userfile konnte nicht gefunden werden.';
 $lang['upload_file_exceeds_limit'] = 'The uploaded file exceeds the maximum allowed size in your PHP configuration file.';
 $lang['upload_file_exceeds_form_limit'] = 'The uploaded file exceeds the maximum size allowed by the submission form.';
-$lang['upload_file_partial'] = 'The file was only partially uploaded.';
+$lang['upload_file_partial'] = 'Die Datei wurde nicht vollständig hochgeladen.';
 $lang['upload_no_temp_directory'] = 'The temporary folder is missing.';
 $lang['upload_unable_to_write_file'] = 'The file could not be written to disk.';
 $lang['upload_stopped_by_extension'] = 'The file upload was stopped by extension.';
